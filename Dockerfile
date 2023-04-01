@@ -4,10 +4,10 @@ RUN apt update && apt install git -y
 
 WORKDIR /server
 
-RUN git pull https://github.com/tapinko/www
+RUN git pull https://github.com/tapinko/www.git
 
 RUN npm install
 
-EXPOSE 8081
+EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["node", "server"]
