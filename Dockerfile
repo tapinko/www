@@ -1,10 +1,10 @@
-FROM node:gallium-alpine3.17
+FROM node:16.20.0-bullseye-slim
 
 RUN apt update && apt install git -y
 
 WORKDIR /server
 
-RUN git pull https://github.com/tapinko/www.git
+RUN git clone https://github.com/tapinko/www.git
 
 RUN npm install
 
